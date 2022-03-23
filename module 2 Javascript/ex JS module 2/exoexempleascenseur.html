@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title> premier JS </title>
+</head>
+
+<body>
+    <script>
+        var etage = parseInt(prompt("entrer l'etage ou l'ascenseur doit se rendre (de -2 a 30):"));
+        if (etage == 0) {
+
+            alert('vous vous trouver deja au rez de chausser');
+        } else if (-2 <= etage && etage <= 30) {
+
+            alert("direction letage n°" + etage + ' !');
+
+        }
+        else {
+            alert("l'etage specifie n'existe pas.");
+        }
+    </script>
+</body>
+
+</html>

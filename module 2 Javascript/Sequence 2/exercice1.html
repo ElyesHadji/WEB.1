@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+
+    <title> JS exercice 1</title>
+
+</head>
+
+<body>
+
+    <div id="p"><img id='img' src="image/call.gif"></p>
+
+        <script>
+            document.getElementById("img").onmouseover = function () { mouseOver() };
+            document.getElementById("img").onmouseout = function () { mouseOut() };
+
+            function mouseOver() {
+                document.getElementById("img").src="image/call2.gif";
+            }
+
+            function mouseOut() {
+                document.getElementById("img").src="image/call.gif";
+            }
+        </script>
+
+</body>
+
+</html>
+

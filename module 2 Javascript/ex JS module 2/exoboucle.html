@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title> premier JS </title>
+</head>
+
+<body>
+    <script>
+        var prenoms = '', prenom_en_cours;
+        boucle_ok = true;
+        while (boucle_ok) {
+            prenom_en_cours = prompt('entrez un  prenom:!');
+            if (prenom_en_cours) {//test si un prenom a etet rentre 
+                prenom += prenom_en_cours + '';// ajoute le nvx prenom ansi qu'une espache juste apres
+            }
+            else {
+                boucle_ok = false; // aucun prenom n'a ete entrre, donc on fais en sortye d'invalider la condition
+
+            }
+
+        }
+}
+        alert('prenom rebtres: ' + prennoms);// affiche les prenom a la suite
+    </script>
+</body>
+
+</html>

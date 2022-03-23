@@ -1,0 +1,66 @@
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<!-- Le conteneur de notre carte -->
+<div id="carte"></div>
+<!-- Le script qui va créer notre carte -->
+<!-- cf. onglets "script" -->
+<style>
+    #carte {
+        height: 400px;
+        width: 500px;
+    }
+</style>
+
+
+<script>
+
+    function initialiser() {
+        // Objet representant une coordonnée
+        var latlng = new google.maps.LatLng(48.958753384536124, 2.546691806728111);
+        /*
+            Objet contenant des propriétés avec des identificateurs 
+            prédéfinis dans Google Maps permettant de définir des 
+            options d'affichage de notre carte
+        */
+        var options = {
+            center: latlng,
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+
+        /*
+            Constructeur de la carte qui prend en paramêtre le conteneur HTML
+            dans lequel la carte doit s'afficher et les options
+        */
+        var carte = new google.maps.Map(document.getElementById("carte"), options);
+        var marqueur = new google.maps.Marker({
+            position: new google.maps.LatLng(48.95864163771714, 2.5467592910507504),
+            map: carte // la variable js représentant la carte
+            
+        });
+    }
+   var marqueur = [
+  ["Rue lycee", 48.95900570391468, 2.544378337140891, 1],
+  ["A104(1)", 48.96093247296431, 2.542770727415518, 2],
+  ["A104(2)",48.96307696316067, 2.5490990958582556, 3],
+  ["Auchan",48.961619390019024, 2.5533095023435317, 4],
+  ["Centre", 48.95996072048708, 2.548461155552724, 5],
+  ["Jean Rostand", 48.959043775738266, 2.546793584834012, 6]
+];
+    // On lance l'initialisation de notre carte
+    initialiser();
+    for (let i = 0; i < marqueur.length; i++) {
+    const marq = marqueur[i];
+
+    new google.maps.Marker({
+      position: { lat: marq[1], lng: marq[2] },
+      map,
+      icon: image,
+      shape: shape,
+      title: marq[0],
+      zIndex: marq[3],
+    });
+    }
+    // On lance l'initialisation de notre carte
+    initialiser();/*
+</script>
